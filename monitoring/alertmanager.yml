@@ -1,0 +1,14 @@
+route:
+  receiver: 'telegram'
+receivers:
+- name: 'telegram'
+  telegram_configs:
+  - bot_token: '8700646354:AAFOPOMdfa_HVkv5Goy-N15gJNJGNYgU4RM'
+    chat_id: 6965033982
+    api_url: 'https://api.telegram.org'
+    parse_mode: 'HTML'
+    message: |
+      <b>🚨 Alertmanager</b>
+      <b>Alert:</b> {{ .CommonAnnotations.summary }}
+      <b>Description:</b> {{ .CommonAnnotations.description }}
+      <b>Severity:</b> {{ .CommonLabels.severity }}

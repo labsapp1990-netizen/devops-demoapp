@@ -1,0 +1,17 @@
+{
+  "dashboard": {
+    "title": "DemoApp Overview",
+    "panels": [
+      {
+        "title": "Request Rate",
+        "targets": [
+          {
+            "expr": "rate(flask_http_request_total[5m])",
+            "legendFormat": "{{ method }} {{ status }}"
+          }
+        ]
+      }
+    ],
+    "schemaVersion": 16
+  }
+}
