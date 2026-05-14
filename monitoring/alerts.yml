@@ -3,9 +3,9 @@ groups:
   rules:
   - alert: AppDown
     expr: up{job="app"} == 0
-    for: 1m
+    for: 3m
     labels:
       severity: critical
     annotations:
       summary: "Приложение недоступно"
-      description: "Приложение app не отвечает более 1 минуты"
+      description: "Приложение app не отвечает более 3 минут"
